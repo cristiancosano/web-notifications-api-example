@@ -1,0 +1,15 @@
+{
+    "background_color": "orange",
+    "description": "Tienda online para la compra de artículos para mamás y bebés.",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "/img/alinatal.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "name": "Alinatal | Tu tienda para el bebe",
+    "short_name": "Alinatal",
+    "start_url": "/form"
+  }

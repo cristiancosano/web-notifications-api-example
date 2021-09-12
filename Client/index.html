@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script>
+        Notification.requestPermission(function(result) {
+        if (result === 'denied') {
+            console.log('Permission wasn\'t granted. Allow a retry.');
+            return;
+        } else if (result === 'default') {
+            console.log('The permission request was dismissed.');
+            return;
+        }
+            //let notification = new Notification('ola')
+        });
+
+        
+        let serviceWorker = navigator.serviceWorker.register('/Client/sw.js').then(
+            (registration) => console.log('ServiceWorker registration successful with scope: ', registration.scope),
+            (err) => console.log('ServiceWorker registration failed: ', err)
+        )
+    </script>
+    
+</body>
+</html>
